@@ -10,10 +10,19 @@ const name=document.querySelector<HTMLInputElement>("#name")
 const email =document.querySelector<HTMLInputElement>("#email")
 const userForm=document.querySelector<HTMLFormElement>("#userForm")
 const userList =document.querySelector<HTMLDivElement>("#userList")
+// const errorDiv = document.querySelector<HTMLDivElement>("#error")
 
 
 userForm?.addEventListener('submit', (e)=>{
   e.preventDefault()
+
+  // if (name?.value === undefined || email?.value === undefined) return
+  // if (!name?.value.trim() || !email?.value.trim()) {
+  //   errorDiv!.textContent = "Name and email cannot be empty."
+  //   return
+  // } else {
+  //   errorDiv!.textContent = ""
+  // }
 
     if (!name?.value.trim() || !email?.value.trim()) return  /* undefined */
 
